@@ -22,6 +22,9 @@ class GithubUserTableViewCell: UITableViewCell {
         self.staffView.isHidden = true
         self.avatarImage.kf.indicatorType = .activity
         
+        self.avatarImage.layer.masksToBounds = true
+        self.avatarImage.layer.cornerRadius = self.avatarImage.frame.size.height / 2
+        
         self.staffLabel.layer.masksToBounds = true
         self.staffLabel.layer.cornerRadius = self.staffLabel.frame.size.height / 2
         
