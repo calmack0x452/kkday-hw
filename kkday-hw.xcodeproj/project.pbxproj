@@ -14,6 +14,9 @@
 		01604B7424ED145300434548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01604B7224ED145300434548 /* LaunchScreen.storyboard */; };
 		01604B8124EE248000434548 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01604B8024EE248000434548 /* HomeViewController.swift */; };
 		01604B8424EE255D00434548 /* GithubUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01604B8324EE255D00434548 /* GithubUserTableViewCell.swift */; };
+		01604B8624EE84E900434548 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01604B8524EE84E800434548 /* APIService.swift */; };
+		01604B8824EE862900434548 /* GithubUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01604B8724EE862900434548 /* GithubUserModel.swift */; };
+		01604B8A24EE8A8900434548 /* GithubUserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01604B8924EE8A8900434548 /* GithubUserCellViewModel.swift */; };
 		0E10D40D2387F61B81867A9E /* Pods_kkday_hw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF3081D9D98E8E0011FF0EC /* Pods_kkday_hw.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		01604B7524ED145300434548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01604B8024EE248000434548 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		01604B8324EE255D00434548 /* GithubUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserTableViewCell.swift; sourceTree = "<group>"; };
+		01604B8524EE84E800434548 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		01604B8724EE862900434548 /* GithubUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserModel.swift; sourceTree = "<group>"; };
+		01604B8924EE8A8900434548 /* GithubUserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserCellViewModel.swift; sourceTree = "<group>"; };
 		64F0D14A411E8731BD6B0422 /* Pods-kkday-hw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkday-hw.debug.xcconfig"; path = "Target Support Files/Pods-kkday-hw/Pods-kkday-hw.debug.xcconfig"; sourceTree = "<group>"; };
 		BAF3081D9D98E8E0011FF0EC /* Pods_kkday_hw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kkday_hw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB80B0CBC722DEDE41E83EA /* Pods-kkday-hw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkday-hw.release.xcconfig"; path = "Target Support Files/Pods-kkday-hw/Pods-kkday-hw.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +71,7 @@
 		01604B6624ED145100434548 /* kkday-hw */ = {
 			isa = PBXGroup;
 			children = (
+				01604B8B24EEC00400434548 /* Service */,
 				01604B7B24EE240300434548 /* Home */,
 				01604B6724ED145100434548 /* AppDelegate.swift */,
 				01604B6924ED145100434548 /* SceneDelegate.swift */,
@@ -98,6 +105,7 @@
 		01604B7D24EE242000434548 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01604B8724EE862900434548 /* GithubUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +113,7 @@
 		01604B7E24EE242D00434548 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				01604B8924EE8A8900434548 /* GithubUserCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -123,6 +132,14 @@
 				01604B8324EE255D00434548 /* GithubUserTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		01604B8B24EEC00400434548 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				01604B8524EE84E800434548 /* APIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		1AAC65F7B9C5B87A2ED5C63F /* Pods */ = {
@@ -260,7 +277,10 @@
 				01604B6824ED145100434548 /* AppDelegate.swift in Sources */,
 				01604B6A24ED145100434548 /* SceneDelegate.swift in Sources */,
 				01604B8424EE255D00434548 /* GithubUserTableViewCell.swift in Sources */,
+				01604B8824EE862900434548 /* GithubUserModel.swift in Sources */,
+				01604B8624EE84E900434548 /* APIService.swift in Sources */,
 				01604B8124EE248000434548 /* HomeViewController.swift in Sources */,
+				01604B8A24EE8A8900434548 /* GithubUserCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
