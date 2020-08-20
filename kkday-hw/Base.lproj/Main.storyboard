@@ -32,20 +32,20 @@
                                                         <constraint firstAttribute="width" secondItem="OZn-u8-X34" secondAttribute="height" multiplier="1:1" id="xcq-ri-Ha8"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Jt-kv-3pu">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Jt-kv-3pu">
                                                     <rect key="frame" x="76" y="11" width="318" height="48"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02B-SO-JJ1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="318" height="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="318" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZn-5y-Q3N">
-                                                            <rect key="frame" x="0.0" y="28" width="318" height="20"/>
+                                                            <rect key="frame" x="0.0" y="24" width="318" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMc-YZ-2oP">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="24"/>
                                                                     <color key="backgroundColor" red="0.37642288210000002" green="0.42357045409999999" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="si7-cl-HkI"/>
