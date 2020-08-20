@@ -17,6 +17,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - Member Variables
     
     let githubUserTableViewCellID = "GithubUserTableViewCell"
+    var cellViewModels = [GithubUserCellViewModel]()
     
     // MARK: - UIView Life-Cycle
     
@@ -24,6 +25,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
 
         initView()
+        buildViewModel()
     }
     
     // MARK: - Member Functions
@@ -35,6 +37,20 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.githubUserTableView.rowHeight = 78
     }
     
+    func buildViewModel() {
+        
+        APIService.fetchSource(urlString: "https://api.github.com/users?page=1&per_page=100",
+                                  type: [GithubUserModel].self) { (responseObject) in
+
+            for userModel in responseObject {
+                let cellViewModel = GithubUserCellViewModel.init(dataModel: userModel)
+                self.cellViewModels.append(cellViewModel)
+            }
+                                    
+            self.githubUserTableView.reloadData()
+        }
+    }
+    
     // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,16 +60,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 20
+        return cellViewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: GithubUserTableViewCell = tableView.dequeueReusableCell(withIdentifier: githubUserTableViewCellID, for: indexPath) as! GithubUserTableViewCell
+        let cellViewModel = cellViewModels[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: githubUserTableViewCellID, for: indexPath)
         
+        if let cell = cell as? GithubUserTableViewCell {
+            cell.setup(viewModel: cellViewModel)
+        }
         
         return cell
     }
-    
-    // MARK: - UITableViewDelegate
 }

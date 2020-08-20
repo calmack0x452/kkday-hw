@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class GithubUserTableViewCell: UITableViewCell {
     
@@ -17,6 +18,9 @@ class GithubUserTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.staffView.isHidden = true
+        self.avatarImage.kf.indicatorType = .activity
         
         self.staffLabel.layer.masksToBounds = true
         self.staffLabel.layer.cornerRadius = self.staffLabel.frame.size.height / 2
@@ -30,5 +34,20 @@ class GithubUserTableViewCell: UITableViewCell {
         super.layoutSubviews()
 
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 2, bottom: 8, right: 2))
+    }
+    
+    func setup(viewModel: GithubUserCellViewModel) {
+        self.authorName.text = viewModel.authorName
+        
+        if viewModel.isStaff {
+            self.staffView.isHidden = false
+        }
+        else {
+            self.staffView.isHidden = true
+        }
+        
+        if let imageUrl = URL(string: viewModel.avatarUrl) {
+            self.avatarImage.kf.setImage(with: imageUrl)
+        }
     }
 }
