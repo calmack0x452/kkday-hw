@@ -3,16 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		01604B6824ED145100434548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01604B6724ED145100434548 /* AppDelegate.swift */; };
 		01604B6A24ED145100434548 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01604B6924ED145100434548 /* SceneDelegate.swift */; };
-		01604B6C24ED145100434548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01604B6B24ED145100434548 /* ViewController.swift */; };
 		01604B6F24ED145100434548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01604B6D24ED145100434548 /* Main.storyboard */; };
 		01604B7124ED145300434548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01604B7024ED145300434548 /* Assets.xcassets */; };
 		01604B7424ED145300434548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01604B7224ED145300434548 /* LaunchScreen.storyboard */; };
+		01604B8124EE248000434548 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01604B8024EE248000434548 /* HomeViewController.swift */; };
+		01604B8424EE255D00434548 /* GithubUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01604B8324EE255D00434548 /* GithubUserTableViewCell.swift */; };
 		0E10D40D2387F61B81867A9E /* Pods_kkday_hw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF3081D9D98E8E0011FF0EC /* Pods_kkday_hw.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +21,12 @@
 		01604B6424ED145100434548 /* kkday-hw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kkday-hw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01604B6724ED145100434548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01604B6924ED145100434548 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		01604B6B24ED145100434548 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01604B6E24ED145100434548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01604B7024ED145300434548 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01604B7324ED145300434548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01604B7524ED145300434548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01604B8024EE248000434548 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		01604B8324EE255D00434548 /* GithubUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserTableViewCell.swift; sourceTree = "<group>"; };
 		64F0D14A411E8731BD6B0422 /* Pods-kkday-hw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkday-hw.debug.xcconfig"; path = "Target Support Files/Pods-kkday-hw/Pods-kkday-hw.debug.xcconfig"; sourceTree = "<group>"; };
 		BAF3081D9D98E8E0011FF0EC /* Pods_kkday_hw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kkday_hw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB80B0CBC722DEDE41E83EA /* Pods-kkday-hw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkday-hw.release.xcconfig"; path = "Target Support Files/Pods-kkday-hw/Pods-kkday-hw.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,9 +65,9 @@
 		01604B6624ED145100434548 /* kkday-hw */ = {
 			isa = PBXGroup;
 			children = (
+				01604B7B24EE240300434548 /* Home */,
 				01604B6724ED145100434548 /* AppDelegate.swift */,
 				01604B6924ED145100434548 /* SceneDelegate.swift */,
-				01604B6B24ED145100434548 /* ViewController.swift */,
 				01604B6D24ED145100434548 /* Main.storyboard */,
 				01604B7024ED145300434548 /* Assets.xcassets */,
 				01604B7224ED145300434548 /* LaunchScreen.storyboard */,
@@ -74,13 +76,61 @@
 			path = "kkday-hw";
 			sourceTree = "<group>";
 		};
+		01604B7B24EE240300434548 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				01604B7D24EE242000434548 /* Model */,
+				01604B7C24EE240F00434548 /* View */,
+				01604B7E24EE242D00434548 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		01604B7C24EE240F00434548 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01604B8224EE253400434548 /* Cell */,
+				01604B7F24EE243900434548 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01604B7D24EE242000434548 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01604B7E24EE242D00434548 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		01604B7F24EE243900434548 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				01604B8024EE248000434548 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		01604B8224EE253400434548 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				01604B8324EE255D00434548 /* GithubUserTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		1AAC65F7B9C5B87A2ED5C63F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				64F0D14A411E8731BD6B0422 /* Pods-kkday-hw.debug.xcconfig */,
 				FAB80B0CBC722DEDE41E83EA /* Pods-kkday-hw.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,9 +257,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01604B6C24ED145100434548 /* ViewController.swift in Sources */,
 				01604B6824ED145100434548 /* AppDelegate.swift in Sources */,
 				01604B6A24ED145100434548 /* SceneDelegate.swift in Sources */,
+				01604B8424EE255D00434548 /* GithubUserTableViewCell.swift in Sources */,
+				01604B8124EE248000434548 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
